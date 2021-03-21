@@ -11,7 +11,7 @@
 	<groupId>oh</groupId>
 	<artifactId>github-action-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>github-action-test</name>
 	<description>github action test</description>
 	<properties>
