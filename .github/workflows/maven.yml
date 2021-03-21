@@ -48,5 +48,5 @@ jobs:
       run: aws s3 cp --region ap-northeast-2 ./$GITHUB_SHA.zip s3://jwawsbucket/test/$GITHUB_SHA.zip
 
     - name: Code Deploy
-      run: aws deploy create-deployment --application-name testapp --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name dev --ignore-application-stop-failures --s3-location bucket=jwawsbucket,bundleType=zip,key=test/$GITHUB_SHA.zip
+      run: aws deploy create-deployment --ignore-application-stop-failures --application-name testapp --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name dev --s3-location bucket=jwawsbucket,bundleType=zip,key=test/$GITHUB_SHA.zip
 
